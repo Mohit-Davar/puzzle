@@ -7,7 +7,7 @@ const giveKey = (req, res) => {
     const scriptContent = `const requiredInfo = {
             key: ${key},
             input: ${input},
-            Try_these_Algorithms: ["Advanced Encryption Standard", "Blowfish", "Twofish", "RC4", "Rivest-Shamir-Adleman", "International Data Encryption Algorithm"]
+            Try_these_Algorithms: ["Blowfish", "RC4", "Rivest-Shamir-Adleman", "Twofish", "International Data Encryption Algorithm", "Advanced Encryption Standard" ]
         }`
     res.send(scriptContent);
 }
