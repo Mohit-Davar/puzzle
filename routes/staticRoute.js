@@ -8,6 +8,9 @@ router.route("/")
     })
 router.route("/key")
     .get(giveKey)
-
+router.route("/easy")
+    .get((req, res) => {
+        res.render("easy")
+    })
 module.exports = router
 
