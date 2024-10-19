@@ -7,7 +7,7 @@ const giveKey = (req, res) => {
     const scriptContent = `const requiredInfo = {
             key: ${key},
             input: ${input},
-            try_these_algorithm_options: ["Advanced Encryption Standard(AES)", "Blowfish", "GCM (Galois/Counter Mode)", "RC4", "RSA(Rivest-Shamir-Adleman)", "IDEA (International Data Encryption Algorithm)", "Triple DES (3DES)", "Twofish"]
+            Try_these_Algorithms: ["Advanced Encryption Standard", "Blowfish", "Twofish", "RC4", "Rivest-Shamir-Adleman", "International Data Encryption Algorithm"]
         }`
     res.send(scriptContent);
 }
