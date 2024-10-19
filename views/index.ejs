@@ -7,7 +7,7 @@
     <title>Puzzle</title>
     <link rel="stylesheet" href="/output.css">
     <style>
-        .top-0 {
+        button {
             display: none;
         }
     </style>
@@ -17,12 +17,12 @@
     <main class="h-screen flex justify-center items-center">
         <img src="/Logo.jpg" alt="Logo" class="w-[20vw]">
         <section class="absolute size-full">
-            <p class="hidden pointer-events-none">Nice try! Find somewhere else</p>
+            <div class="hidden pointer-events-none">Nice try! You're on the right track. Keep searching.</div>
             <div>
                 <div>
                     <div>
                         <div>
-                            <p class="hidden pointer-events-none">Sorry for such nesting!</p>
+                            <p class="hidden pointer-events-none">It's not here. I understand it's frustrating.</p>
                         </div>
                     </div>
                 </div>
@@ -33,13 +33,16 @@
                         <div>
                             <div>
                                 <div>
-                                    <p class="hidden pointer-events-none">Bhool Bhulayia</p>
+                                    <p class="hidden pointer-events-none">
+                                        Have you counted the number of clicks you've made?
+                                    </p>
                                     <div>
                                         <div>
                                             <div>
                                                 <div>
-                                                    <p class="hidden pointer-events-none">I told you to not keep
-                                                        clicking</p>
+                                                    <p class="hidden pointer-events-none">
+                                                        Stop clicking!!
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -55,11 +58,17 @@
                     <div>
                         <div>
                             <div>
-                                <div class="hidden pointer-events-none">Pinky Promise not here</div>
+                                <div class="hidden pointer-events-none">Pinky Promise key is not here!</div>
                                 <div>
-                                    <div class="absolute top-0 right-1/2 hidden key pointer-events-none bg-green-700 px-4 py-2 rounded-3xl text-white my-5"
-                                        data-secret="Click on it to get key, algorithms options, input-text in console">
-                                        Click me
+                                    <div>
+                                        <div>
+                                            <button
+                                                class="absolute     top-0 right-1/2 hidden button pointer-events-none      bg-green-700 px-4 py-2 rounded-3xl text-white my-5"
+                                                data-secret="Make the button visible on your screen and click on it to receive your next clue."
+                                                onclick="LoadScript()">
+                                                Hello!
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -67,22 +76,18 @@
                     </div>
                 </div>
             </div>
-            <div></div>
         </section>
     </main>
 </body>
+
 <script>
-    document.querySelector(".key").addEventListener("click", () => {
+    const LoadScript = () => {
         fetch('/key')
             .then(response => response.text())
             .then(scriptContent => {
-                // const script = document.createElement('script');
-                // script.innerHTML = scriptContent;
-                // document.body.appendChild(script);
-                // eval(scriptContent);
                 console.log(scriptContent)
             });
-    })
+    }
 </script>
 
 </html>
