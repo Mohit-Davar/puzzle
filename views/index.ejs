@@ -63,9 +63,9 @@
                                     <div>
                                         <div>
                                             <button
-                                                class="absolute     top-0 right-1/2 hidden button pointer-events-none      bg-green-700 px-4 py-2 rounded-3xl text-white my-5"
+                                                class="absolute top-0 right-1/2 hidden button pointer-events-none bg-green-700 px-4 py-2 rounded-3xl text-white my-5"
                                                 data-secret="Make the button visible on your screen and click on it to receive your next clue."
-                                                onclick="LoadScript()">
+                                                onclick="LoadScript(event)">
                                                 Hello!
                                             </button>
                                         </div>
@@ -80,13 +80,31 @@
     </main>
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.js"></script>
 <script>
-    const LoadScript = () => {
+    const showSparkle = (element) => {
+        const rect = element.getBoundingClientRect();
+
+        const x = (rect.left + rect.right) / 2;
+
+        const y = (rect.top + rect.bottom) / 2;
+
+        const confettiSettings = {
+            particleCount: 100,
+            spread: 70,
+            origin: { x: x / window.innerWidth, y: y / window.innerHeight }
+        };
+
+        confetti(confettiSettings);
+    }
+    const LoadScript = (e) => {
+        showSparkle(e.target)
         fetch('/key')
             .then(response => response.text())
             .then(scriptContent => {
-                console.log(scriptContent)
-            });
+                console.log(scriptContent);
+            })
+            .catch(err => console.error('Error fetching the script:', err));
     }
 </script>
 

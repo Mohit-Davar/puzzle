@@ -2,8 +2,8 @@ require("dotenv").config()
 
 const giveKey = (req, res) => {
     res.type('application/javascript');
-    const key = process.env.key
-    const input = process.env.input
+    const key = process.env.KEY
+    const input = process.env.INPUT
     const scriptContent = `const requiredInfo = {
             key: ${key},
             input: ${input},
