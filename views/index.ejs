@@ -15,7 +15,7 @@
 
 <body>
     <main class="h-screen flex justify-center items-center">
-        <img src="/Logo.jpg" alt="Logo" class="w-[20vw]">
+        <img src="/Logo.jpg" alt="Logo" class="w-[20vw] select-none">
         <section class="absolute size-full">
             <div class="hidden pointer-events-none">Nice try! You're on the right track. Keep searching.</div>
             <div>
@@ -64,7 +64,7 @@
                                         <div>
                                             <button
                                                 class="absolute top-0 right-1/2 hidden button pointer-events-none bg-green-700 px-4 py-2 rounded-3xl text-white my-5"
-                                                data-secret="Make the button visible on your screen and click on it to receive your next clue."
+                                                data-secret="Make the button visible on your screen and click on it to receive your next clue in CONSOLE."
                                                 onclick="LoadScript(event)">
                                                 Hello!
                                             </button>
@@ -82,30 +82,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.js"></script>
 <script>
-    const showSparkle = (element) => {
-        const rect = element.getBoundingClientRect();
-
-        const x = (rect.left + rect.right) / 2;
-
-        const y = (rect.top + rect.bottom) / 2;
-
-        const confettiSettings = {
-            particleCount: 100,
-            spread: 70,
-            origin: { x: x / window.innerWidth, y: y / window.innerHeight }
-        };
-
-        confetti(confettiSettings);
-    }
-    const LoadScript = (e) => {
-        showSparkle(e.target)
-        fetch('/key')
-            .then(response => response.text())
-            .then(scriptContent => {
-                console.log(scriptContent);
-            })
-            .catch(err => console.error('Error fetching the script:', err));
-    }
+    (function (_0x4273c3, _0x5ac62d) { const _0x4a1138 = _0xcdc4, _0x393ab2 = _0x4273c3(); while (!![]) { try { const _0x4ec05a = parseInt(_0x4a1138(0x1f5)) / 0x1 + -parseInt(_0x4a1138(0x1f2)) / 0x2 * (-parseInt(_0x4a1138(0x202)) / 0x3) + parseInt(_0x4a1138(0x1f9)) / 0x4 * (-parseInt(_0x4a1138(0x1f6)) / 0x5) + parseInt(_0x4a1138(0x1ff)) / 0x6 * (-parseInt(_0x4a1138(0x1f8)) / 0x7) + -parseInt(_0x4a1138(0x204)) / 0x8 * (-parseInt(_0x4a1138(0x1ee)) / 0x9) + -parseInt(_0x4a1138(0x1fa)) / 0xa * (parseInt(_0x4a1138(0x1fc)) / 0xb) + parseInt(_0x4a1138(0x1fe)) / 0xc * (parseInt(_0x4a1138(0x1f7)) / 0xd); if (_0x4ec05a === _0x5ac62d) break; else _0x393ab2['push'](_0x393ab2['shift']()); } catch (_0x2a7ffb) { _0x393ab2['push'](_0x393ab2['shift']()); } } }(_0x12fd, 0xef631)); function _0xcdc4(_0x45594d, _0xddac81) { const _0x12fda1 = _0x12fd(); return _0xcdc4 = function (_0xcdc485, _0x38b023) { _0xcdc485 = _0xcdc485 - 0x1ee; let _0x5bd963 = _0x12fda1[_0xcdc485]; return _0x5bd963; }, _0xcdc4(_0x45594d, _0xddac81); } const showSparkle = _0x583221 => { const _0xbddd6b = _0xcdc4, _0x22369a = _0x583221[_0xbddd6b(0x1f4)](), _0x4dcb2a = (_0x22369a[_0xbddd6b(0x1f3)] + _0x22369a['right']) / 0x2, _0x546e79 = (_0x22369a[_0xbddd6b(0x200)] + _0x22369a['bottom']) / 0x2, _0x449d94 = { 'particleCount': 0x64, 'spread': 0x46, 'origin': { 'x': _0x4dcb2a / window[_0xbddd6b(0x1f1)], 'y': _0x546e79 / window[_0xbddd6b(0x201)] } }; confetti(_0x449d94); }, LoadScript = _0x3ff3a8 => { const _0x40795c = _0xcdc4; showSparkle(_0x3ff3a8['target']), fetch('/key', { 'method': _0x40795c(0x1fb) })[_0x40795c(0x1f0)](_0x12a282 => _0x12a282['text']())[_0x40795c(0x1f0)](_0x430abc => { const _0x319b7c = _0x40795c; console[_0x319b7c(0x203)](_0x430abc); })['catch'](_0x231ceb => console[_0x40795c(0x1fd)](_0x40795c(0x1ef), _0x231ceb)); }; function _0x12fd() { const _0x567821 = ['13266463uqCnwf', '4DlQhKi', '10UIHUUm', 'POST', '5722838dbihCf', 'error', '12koYuqG', '6vNYyqH', 'top', 'innerHeight', '21aAbCPv', 'log', '432VWYMkI', '204210cohVLc', 'Error\x20fetching\x20the\x20script:', 'then', 'innerWidth', '424642omfusD', 'left', 'getBoundingClientRect', '639169GIGtYo', '5695555DblObK', '15397603OsWpqp']; _0x12fd = function () { return _0x567821; }; return _0x12fd(); }
 </script>
 
 </html>

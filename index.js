@@ -1,5 +1,6 @@
 const express = require("express")
 const app = express();
+// const data = DataModel;
 
 //Setting up enviroment variable
 require('dotenv').config()

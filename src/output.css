@@ -612,6 +612,12 @@ video {
   width: 20vw;
 }
 
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .items-center {
   align-items: center;
 }
@@ -629,16 +635,6 @@ video {
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
 
-.bg-red-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
-}
-
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -649,30 +645,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.text-\[clamp\(\)\] {
-  font-size: clamp();
-}
-
-.text-\[clamp\(40px\2c \)\] {
-  font-size: clamp(40px,);
-}
-
-.text-\[clamp\(px\2c \)\] {
-  font-size: clamp(px,);
-}
-
-.text-\[clamp\(2rpx\2c \)\] {
-  font-size: clamp(2rpx,);
-}
-
-.text-\[clamp\(2rem\2c \)\] {
-  font-size: clamp(2rem,);
-}
-
-.text-\[clamp\(2rem\2c 5vw\2c \)\] {
-  font-size: clamp(2rem,5vw,);
-}
-
 .text-\[clamp\(2rem\2c 5vw\2c 10rem\)\] {
   font-size: clamp(2rem,5vw,10rem);
 }
@@ -680,12 +652,4 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[c\] {
-  color: c;
-}
-
-.text-\[clamp\] {
-  color: clamp;
 }

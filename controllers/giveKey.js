@@ -8,7 +8,8 @@ const giveKey = (req, res) => {
             key: ${key},
             input: ${input},
             Try_these_Algorithms: ["Blowfish", "RC4", "Rivest-Shamir-Adleman", "Twofish", "International Data Encryption Algorithm", "Advanced Encryption Standard" ]
-        }`
+        }
+        Use key to decode the message hidden in the input. Try using any one algorithm to get next clue.`
     res.send(scriptContent);
 }
 
